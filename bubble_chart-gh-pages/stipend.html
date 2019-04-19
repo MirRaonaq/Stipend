@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Graduate TA Stipend</title>
+  <meta name="description" content="Example Bubble chart implementation in JS. Based on NYT visualization">
+  <meta name="author" content="Jim Vallandingham">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/bubble_chart.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Graduate Stipend Data</h1>
+    <div class='my-legend'>
+    <div class='legend-title'>Graph Legend</div>
+    <div class='legend-scale'>
+      <ul class='legend-labels'>
+        <li><span style='background:#d84b2a;'></span>Low</li>
+        <li><span style='background:#beccae;'></span>Medium</li>
+        <li><span style='background:#7aa25c;'></span>High</li>
+      </ul>
+    </div>
+    </div>
+    <div id="vis"></div>
+
+    <div class="footer">
+      <p>Source code from vlandham</p>
+      <p><a href="https://github.com/vlandham/bubble_chart">Code</a></p>
+    </div>
+  </div>
+
+  <script src="lib/d3.js"></script>
+  <script src="src/tooltip.js"></script>
+  <script src="src/bubble_chart.js"></script>
+
+
+</body>
+</html>

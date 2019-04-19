@@ -21,16 +21,16 @@ function bubbleChart() {
   var center = { x: width / 2, y: height / 2 };
 
   var yearCenters = {
-    2008: { x: width / 3, y: height / 2 },
-    2009: { x: width / 2, y: height / 2 },
-    2010: { x: 2 * width / 3, y: height / 2 }
+    Low: { x: width / 3, y: height / 2 },
+    Medium: { x: width / 2, y: height / 2 },
+    High: { x: 2 * width / 3, y: height / 2 }
   };
 
   // X locations of the year titles.
   var yearsTitleX = {
-    2008: 160,
-    2009: width / 2,
-    2010: width - 160
+    Low: 160,
+    Medium: width / 2,
+    High: width - 160
   };
 
   // Used when setting up force and
@@ -286,7 +286,7 @@ function bubbleChart() {
     var content = '<span class="name">School: </span><span class="value">' +
                   d.name +
                   '</span><br/>' +
-                  '<span class="name">Amount: </span><span class="value">$' +
+                  '<span class="name">Annual Stipend: </span><span class="value">$' +
                   addCommas(d.value) +
                   '</span><br/>' +
                   '<span class="name">Year: </span><span class="value">' +
@@ -314,7 +314,7 @@ function bubbleChart() {
    * displayName is expected to be a string and either 'year' or 'all'.
    */
   chart.toggleDisplay = function (displayName) {
-    if (displayName === 'year') {
+    if (displayName === 'group') {
       splitBubbles();
     } else {
       groupBubbles();
